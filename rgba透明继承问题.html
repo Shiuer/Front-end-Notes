@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>rgba透明继承问题</title>
+	<style>
+		.mask{filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#CC000000', endColorstr='#CC000000');}
+		:root .mask {filter:none; /*处理IE9浏览器中的滤镜效果*/background-color:rgba(0,0,0,0.8);}
+		.mask{width:300px;height:300px;position:absolute;top:0}
+	</style>
+</head>
+<body>
+	<p>.mask{filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#CC000000', endColorstr='#CC000000');}</p>
+	<p>IE6-8下的透明处理</p>
+	<p>:root .mask {filter:none; /*处理IE9浏览器中的滤镜效果*/background-color:rgba(0,0,0,0.8);}</p>
+	<p>结构性伪类 E:root(IE678不支持)</p>
+	<div class="mask"></div>
+</body>
+</html>

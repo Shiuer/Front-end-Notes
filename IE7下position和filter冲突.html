@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>IE7下position和filter冲突</title>
+</head>
+<body>
+
+<div class="artical">
+	<h2 class="title content-title">IE7下position和filter冲突</h2>
+	<p class="datetime">16 Dec 2013</p>
+	<div class="content">
+		<p>前两天用到父元素半透明同时子元素要固定位置显示，且比父元素大的情况下发现子元素无法显示被父元素像是截断了，隐藏了超出的部分，修改了N次，给父元素加overflow:visible;也无济与事。最后将属性逐个删除，才算找到原因，是position与filter同时出现引发的问题;父元素同时设置了position:relative;filter:alpha(opacity=50%;)两个属性，自然父元素的相对定位是不能去的，只能将filter:alpha(opacity=50%;)去掉，然后从js里加上算是解决了这个问题。</p>
+		<p>今天又想到了这个问题，百度了下，发现不是我一个人遇到这个问题，看别人的解决方法是-ms-filter:alpha(opacity=50%;)。</p>
+		<p>是IE的一个bug</p>
+		<!--more-->
+		<p>In order to guarantee that users of both Internet Explorer 7 and 8 experience the filter, you can include both syntaxes listed above. Due to a peculiarity in our parser, you need to include the updated syntax first before the older syntax in order for the filter to work properly in Compatibility View (This is a known bug and will be fixed upon final release of IE8).</p>
+		<p>附上原文地址：<a href="http://blogs.msdn.com/b/ie/archive/2008/09/08/microsoft-css-vendor-extensions.aspx" target="_blank">http://blogs.msdn.com/b/ie/archive/2008/09/08/microsoft-css-vendor-extensions.aspx</a></p> 
+	</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery 自定义属性</title>
+</head>
+<body>
+	<h3>jquery 自定义属性</h3>
+	<label data-role="giftCode"><input type="text">自定义</label>
+	<input type="text">
+	<button id="btn">改变input宽度</button>
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.0.min.js"></script>
+  <script>
+    $(function(){
+			$("#btn").click(function(){
+				$('[data-role=giftCode] input[type="text"]').css({"width":"20px"});
+			})
+		})
+	</script>
+</body>
+</html>
