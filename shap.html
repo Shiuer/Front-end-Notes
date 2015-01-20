@@ -4,15 +4,21 @@
 	<meta charset="UTF-8">
 	<title>梯形</title>
 	<style>
-	body{background:#000;}
+	body{background:#000;width:500px;margin:0 auto}
 	.trapezoid{position:relative;width:300px;height:300px;background:#fff;}
 	.trapezoid:before,.trapezoid:after{opacity:0;content:"";height:0;width:0;border-top:300px solid #000;border-left:0 solid transparent;border-right:50px solid transparent;position: absolute;top:0;transition:opacity 200ms;}
 	.trapezoid:before{left:0;}
 	.trapezoid:after{border-left:50px solid transparent;border-right:0 solid transparent;right:0;}
 	.trapezoid:hover:before,.trapezoid:hover:after{opacity:1}
+
+	.perspective{transition:all 500ms;width:300px;height:300px;background:#fff;}
+	.perspective:hover{transform:perspective(350px) rotateX(45deg) translateY(-20px);}
 	</style>
 </head>
 <body>
+	<h2>css2</h2>
 	<div class="trapezoid"></div>
+	<h2>css3</h2>
+	<div class="perspective"></div>
 </body>
 </html>
