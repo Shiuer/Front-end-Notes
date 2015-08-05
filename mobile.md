@@ -1,4 +1,4 @@
-
+﻿
 <!-- 启用360浏览器的极速模式(webkit) -->
 <meta name="renderer" content="webkit">
 <!-- 避免IE使用兼容模式 -->
@@ -51,3 +51,7 @@
 // iPad Retina landscape
 <link href="apple-touch-startup-image-1496x2048.png"media="(device-width: 1536px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)"rel="apple-touch-startup-image" />
 
+transition与transform在safari下兼容问题，是因为transition-property没有工作，要改成transition:all可避免此问题。
+
+表单提交autocomplete="off" 表单数据自动填写
+safari下元素执行transform时，再给其动画暂停animation-play-state:paused;会导致safari崩溃。
