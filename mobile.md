@@ -85,7 +85,7 @@ safari下元素执行transform时，再给其动画暂停animation-play-state:pa
     border-radius: 8px;
 }
 
-###box-shadow单边阴影 利用阴影扩展半径：spread-radius
+###box-shadow单边阴影 利用阴影扩展半径 spread-radius
 >inset x-offset y-offset blur-radius spread-radius color
 >投影方式 X轴偏移量 Y轴偏移量 阴影模糊半径 阴影扩展半径 阴影颜色
 >box-shadow: 0 3px 2px -3px red;
