@@ -7,9 +7,7 @@ absolute相对于bottom定位时，切记要设置父元素的高度。尤其不
 ###retina 下 1px 边框
 用background-image实现
 
-
 单边
-
 background:-webkit-gradient(linear, left top,left bottom, color-stop(0.5,red), color-stop(0.5,transparent));
 	background-size:auto 1px;
 	background-repeat:repeat-x;
@@ -17,7 +15,6 @@ background:-webkit-gradient(linear, left top,left bottom, color-stop(0.5,red), c
 
 
 四边，圆角时，四角会空
-
 .border{
 	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.5, transparent), color-stop(0.5, red)), -webkit-gradient(linear, left top, right top, color-stop(0.5, transparent), color-stop(0.5, blue)), -webkit-gradient(linear, left top, left bottom, color-stop(0.5, transparent), color-stop(0.5, green)), -webkit-gradient(linear, right top, left top, color-stop(0.5, transparent), color-stop(0.5, black));
 	-webkit-background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
@@ -28,7 +25,6 @@ background:-webkit-gradient(linear, left top,left bottom, color-stop(0.5,red), c
 用transform: scale(0.5)
 
 利用伪元素实现
-
 .border-radius:before{
 	content: '';
 	position: absolute;
