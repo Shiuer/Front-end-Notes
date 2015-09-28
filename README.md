@@ -7,6 +7,7 @@ absolute相对于bottom定位时，切记要设置父元素的高度。尤其不
 transition与transform在safari下兼容问题，是因为transition-property没有工作，要改成transition:all可避免此问题。
 
 表单提交autocomplete="off" 表单数据自动填写
+
 safari下元素执行transform时，再给其动画暂停animation-play-state:paused;会导致safari崩溃。
 
 ###retina 下 1px 边框
