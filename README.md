@@ -19,6 +19,7 @@ safari下元素执行transform时，再给其动画暂停animation-play-state:pa
 background:-webkit-gradient(linear, left top,left bottom, color-stop(0.5,red), color-stop(0.5,transparent));
 	background-size:auto 1px;
 	background-repeat:repeat-x;
+	background-position: $direction left;
 }
 
 
